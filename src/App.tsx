@@ -65,7 +65,20 @@ export default function Home() {
         className={`z-50 flex items-center justify-center gap-2 transition-all duration-300 ${
           isScrolled ? "ml-4" : ""
         }`}
-        href="#"
+        onClick={(e) => {
+              e.preventDefault()
+              const element = document.getElementById("hero")
+              if (element) {
+                const headerOffset = 120 // Account for sticky header height + margin
+                const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+                const offsetPosition = elementPosition - headerOffset
+
+                window.scrollTo({
+                  top: offsetPosition,
+                  behavior: "smooth",
+                })
+              }
+            }}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -101,7 +114,7 @@ export default function Home() {
             className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
             onClick={(e) => {
               e.preventDefault()
-              const element = document.getElementById("pricing")
+              const element = document.getElementById("testimonials")
               if (element) {
                 const headerOffset = 120 // Account for sticky header height + margin
                 const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
@@ -120,7 +133,7 @@ export default function Home() {
             className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
             onClick={(e) => {
               e.preventDefault()
-              const element = document.getElementById("testimonials")
+              const element = document.getElementById("contact")
               if (element) {
                 const headerOffset = 120 // Account for sticky header height + margin
                 const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
@@ -133,26 +146,7 @@ export default function Home() {
               }
             }}
           >
-            <span className="relative z-20">Nosotros</span>
-          </a>
-          <a
-            className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
-            onClick={(e) => {
-              e.preventDefault()
-              const element = document.getElementById("faq")
-              if (element) {
-                const headerOffset = 120 // Account for sticky header height + margin
-                const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
-                const offsetPosition = elementPosition - headerOffset
-
-                window.scrollTo({
-                  top: offsetPosition,
-                  behavior: "smooth",
-                })
-              }
-            }}
-          >
-            <span className="relative z-20">Preguntas</span>
+            <span className="relative z-20">Contacto</span>
           </a>
         </div>
       </header>
@@ -208,22 +202,16 @@ export default function Home() {
                 Servicios
               </button>
               <button
-                onClick={() => handleMobileNavClick("pricing")}
+                onClick={() => handleMobileNavClick("testimonials")}
                 className="text-left px-4 py-3 text-lg font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-background/50"
               >
                 Proyectos
               </button>
               <button
-                onClick={() => handleMobileNavClick("testimonials")}
+                onClick={() => handleMobileNavClick("contact")}
                 className="text-left px-4 py-3 text-lg font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-background/50"
               >
-                Nosotros
-              </button>
-              <button
-                onClick={() => handleMobileNavClick("faq")}
-                className="text-left px-4 py-3 text-lg font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-background/50"
-              >
-                Preguntas
+                Contacto
               </button>
             </nav>
           </div>
@@ -231,16 +219,16 @@ export default function Home() {
       )}
 
       {/* Hero Section */}
-      <Hero />
-
-      {/* Features Section */}
-      <div id="features">
-        <Features />
+      <div id="hero">
+        <Hero />
       </div>
 
-      {/* Pricing Section */}
-      <div id="pricing">
+      {/* <div id="pricing">
         <PricingSection />
+      </div> */}
+
+      <div id="features">
+        <Features />
       </div>
 
       {/* Testimonials Section */}
@@ -248,12 +236,13 @@ export default function Home() {
         <TestimonialsSection />
       </div>
 
-      <NewReleasePromo />
-
-      {/* FAQ Section */}
-      <div id="faq">
-        <FAQSection />
+      <div id="contact">
+        <NewReleasePromo />
       </div>
+
+      {/* <div id="faq">
+        <FAQSection />
+      </div> */}
 
       {/* Sticky Footer */}
       <StickyFooter />

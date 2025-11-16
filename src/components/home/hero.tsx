@@ -8,7 +8,7 @@ import OrbitingParticles from "@/components/ui/orbiting-particles"
 
 export default function Hero() {  
   return (
-    <section className="min-h-screen grid grid-cols-1 md:grid-cols-2 items-center px-6 md:px-24 py-12 gap-8 relative">
+    <section className="min-h-screen grid grid-cols-1 md:grid-cols-2 items-center px-6 md:px-48 py-12 gap-8 relative">
 
       {/* Texto */}
       <div className="flex flex-col justify-center text-center md:text-left">
@@ -20,7 +20,7 @@ export default function Hero() {
         </motion.div>
 
         <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-md mx-auto md:mx-0">
-            Creamos sitios web modernos y software a medida para empresas. Transformamos tus ideas en productos digitales listos
+            Creamos sitios web y software a medida para empresas, transformando tus ideas en productos digitales listos
             para escalar.
         </p>
 
@@ -35,7 +35,7 @@ export default function Hero() {
             href="#proyectos"
             className="border border-cyan-600 text-cyan-600 px-6 py-3 rounded-xl hover:bg-white/10"
           >
-            Ver proyectos & clientes
+            Ver proyectos
           </a>
         </div>
       </div>
