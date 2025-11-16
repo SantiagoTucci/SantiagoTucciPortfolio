@@ -83,7 +83,7 @@ export default function Home() {
         rel="noopener noreferrer"
       >
         <img
-          src="/solo-logo.png"
+          src="/solo-logo.webp"
           alt="Logo"
           className="size-8 w-8 rounded-full"
         />
@@ -174,7 +174,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <img
-            src="/solo-logo.png"
+            src="/solo-logo.webp"
             alt="Logo"
             className="size-8 w-8 rounded-full"
           />
