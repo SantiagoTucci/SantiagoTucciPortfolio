@@ -8,22 +8,22 @@ import OrbitingParticles from "@/components/ui/orbiting-particles"
 
 export default function Hero() {  
   return (
-    <section className="min-h-screen grid grid-cols-1 md:grid-cols-2 items-center px-6 sm:px-15 md:px-35 lg:px-45 py-24 md:py-12 gap-0 md:gap-8 relative">
+    <section className="min-h-screen grid grid-cols-1 md:grid-cols-2 items-center px-6 sm:px-15 md:px-35 lg:px-45 py-24 md:py-12 gap-4 md:gap-8 relative">
 
       {/* Texto */}
       <div className="flex flex-col justify-center text-center md:text-left">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }} className="mb-4" > 
           <h1 id="main-title" className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-6xl"> 
-            Desarrollos <strong>Web</strong> <br /> 
+            Desarrollo <strong>Web</strong> <br /> 
             <em className="italic">para potenciar tu empresa</em> 
           </h1> 
         </motion.div>
 
-        <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-md mx-auto md:mx-0">
+        <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-md mx-auto md:mx-0 px-15 sm:px-0">
             Creamos sitios web y software a medida para potenciar tu empresa.
         </p>
 
-        <div className="mt-12 md:mt-9 flex flex-col sm:flex-row gap-4 justify-center md:justify-start px-12 md:px-0">
+        <div className="mt-12 md:mt-9 flex flex-col sm:flex-row gap-4 justify-center md:justify-start px-20 md:px-0">
           <a
             onClick={(e) => {
               e.preventDefault()

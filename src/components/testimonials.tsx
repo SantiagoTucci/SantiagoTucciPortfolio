@@ -99,9 +99,20 @@ export function TestimonialsSection() {
           </p>
         </div>
 
-        <div className="my-16 flex max-h-[738px] justify-center gap-6 overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]">
+        <div className="my-16 flex max-h-[738px] justify-center gap-6 overflow-hidden 
+        [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]">
 
-          <div>
+          {/* Mobile: mostrar TODOS los proyectos */}
+          <div className="md:hidden">
+            <Marquee pauseOnHover vertical className="[--duration:18s]">
+              {portfolioProjects.map((project) => (
+                <ProjectCard key={project.name} {...project} />
+              ))}
+            </Marquee>
+          </div>
+
+          {/* Desktop columnas separadas */}
+          <div className="hidden md:block">
             <Marquee pauseOnHover vertical className="[--duration:20s]">
               {firstColumn.map((project) => (
                 <ProjectCard key={project.name} {...project} />

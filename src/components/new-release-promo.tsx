@@ -62,7 +62,7 @@ export function NewReleasePromo() {
             />
 
             {/* Contenido */}
-            <div className="relative z-10 px-6 py-10 sm:py-14 flex flex-col items-center text-center gap-6">
+            <div className="relative z-10 px-6 py-10 mt-3.5 sm:mt-0 sm:py-14 flex flex-col items-center text-center gap-7">
 
               <h2 className="text-3xl sm:text-5xl font-bold leading-tight text-white drop-shadow-md">
                 ¿Querés tu Página Web<br className="hidden sm:block" /> o Software?

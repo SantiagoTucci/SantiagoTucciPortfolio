@@ -57,7 +57,7 @@ export function StickyFooter() {
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 cursor-pointer hover:opacity-70 transition-all"
               >
-                <img src="/icons/instagram-icon.png" alt="Instagram" className="w-7 h-7" />
+                <img src="/instagram-icon.webp" alt="Instagram" className="w-7 h-7" />
                 <span>Instagram</span>
               </a>
 
@@ -68,7 +68,7 @@ export function StickyFooter() {
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 cursor-pointer hover:opacity-70 transition-all"
               >
-                <img src="/icons/tiktok-icon.png" alt="TikTok" className="w-7 h-7" />
+                <img src="/tiktok-icon.webp" alt="TikTok" className="w-7 h-7" />
                 <span>TikTok</span>
               </a>
 
@@ -79,7 +79,7 @@ export function StickyFooter() {
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 cursor-pointer hover:opacity-70 transition-all"
               >
-                <img src="/icons/linkedin-icon.png" alt="LinkedIn" className="w-7 h-7" />
+                <img src="/linkedin-icon.webp" alt="LinkedIn" className="w-7 h-7" />
                 <span>LinkedIn</span>
               </a>
 
@@ -90,7 +90,7 @@ export function StickyFooter() {
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 cursor-pointer hover:opacity-70 transition-all"
               >
-                <img src="/icons/github-icon.png" alt="GitHub" className="w-7 h-7" />
+                <img src="/github-icon.webp" alt="GitHub" className="w-7 h-7" />
                 <span>GitHub</span>
               </a>
 
