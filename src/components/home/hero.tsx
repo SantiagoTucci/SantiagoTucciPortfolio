@@ -19,7 +19,7 @@ export default function Hero() {
           </h1> 
         </motion.div>
 
-        <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-md mx-auto md:mx-0 px-15 sm:px-0">
+        <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-md mx-auto md:mx-0 px-13 sm:px-0">
             Creamos sitios web y software a medida para potenciar tu empresa.
         </p>
 
