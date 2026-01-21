@@ -6,31 +6,25 @@ import { useRef } from "react"
 export function NewReleasePromo() {
   const ref = useRef(null)
 
-  // Detecta cuando el componente entra al viewport
+  // Detect when the component enters the viewport
   const isInView = useInView(ref, {
     once: true,
     margin: "-20% 0px",
   })
 
   return (
-    <section id="faq" className="pb-120 pt-24">
-
+    <section id="about" className="pb-120 pt-24">
       <motion.section
         ref={ref}
         initial={{ opacity: 0, y: 60, scale: 0.96 }}
-        animate={
-          isInView
-            ? { opacity: 1, y: 0, scale: 1 }
-            : {}
-        }
+        animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
         transition={{
           duration: 0.9,
-          ease: [0.16, 1, 0.3, 1], // easing suave tipo iOS
+          ease: [0.16, 1, 0.3, 1],
         }}
         className="mt-3 w-full"
       >
         <div className="mx-auto max-w-4xl rounded-[40px] border border-black/5 dark:border-white/20 p-2 shadow-sm">
-
           <div
             className="
               relative mx-auto 
@@ -44,7 +38,7 @@ export function NewReleasePromo() {
               bg-cyan-600 p-3 shadow-sm
             "
           >
-            {/* Glow cyan suave */}
+            {/* Soft cyan glow */}
             <div
               className="absolute inset-0 z-0"
               style={{
@@ -53,7 +47,7 @@ export function NewReleasePromo() {
               }}
             />
 
-            {/* Grain */}
+            {/* Grain texture */}
             <div
               className="absolute inset-0 z-0 opacity-[0.03]"
               style={{
@@ -61,15 +55,15 @@ export function NewReleasePromo() {
               }}
             />
 
-            {/* Contenido */}
+            {/* Content */}
             <div className="relative z-10 px-6 py-10 mt-3.5 sm:mt-0 sm:py-14 flex flex-col items-center text-center gap-7">
-
               <h2 className="text-3xl sm:text-5xl font-bold leading-tight text-white drop-shadow-md">
-                ¿Querés tu Página Web<br className="hidden sm:block" /> o Software?
+                Software Developer<br className="hidden sm:block" /> & QA
               </h2>
 
               <p className="text-white/80 text-base sm:text-lg max-w-md">
-                Desarrollo sitios modernos, rápidos y con alto impacto visual.
+                I design, develop, and test reliable software with a strong focus
+                on quality, performance, and user experience.
               </p>
 
               <svg
@@ -88,27 +82,33 @@ export function NewReleasePromo() {
               </svg>
 
               <a href="https://wa.me/1127082987" target="_blank">
-                <div className="
+                <div
+                  className="
                   group flex items-center gap-3 rounded-full
                   backdrop-blur-md border border-white/30
                   px-6 py-3 bg-white/10 hover:bg-white/20
                   transition-all duration-300 cursor-pointer
-                ">
-                  <div className="
+                "
+                >
+                  <div
+                    className="
                     bg-cyan-700 group-hover:bg-cyan-600 
                     px-4 py-2 rounded-full flex items-center gap-2
                     transition-all
-                  ">
+                  "
+                  >
                     <span className="text-white font-semibold tracking-tight text-sm sm:text-base">
-                      Contactame
+                      Get in Touch
                     </span>
                   </div>
 
-                  <div className="
+                  <div
+                    className="
                     size-[24px] flex items-center justify-center
                     border border-white/40 rounded-full
                     group-hover:translate-x-1 transition-transform
-                  ">
+                  "
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
@@ -119,7 +119,7 @@ export function NewReleasePromo() {
                       strokeWidth="2"
                       className="transition-all group-hover:scale-110"
                     >
-                      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8A8.5 8.5 0 0 1 17.5 5a8.38 8.38 0 0 1 3.5 3.5 8.38 8.38 0 0 1 0 3z"/>
+                      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8A8.5 8.5 0 0 1 17.5 5a8.38 8.38 0 0 1 3.5 3.5 8.38 8.38 0 0 1 0 3z" />
                     </svg>
                   </div>
                 </div>

@@ -51,7 +51,7 @@ export function StickyFooter() {
             >
 
               {/* Instagram */}
-              <a 
+              {/* <a 
                 href="https://www.instagram.com/tucciwebstudio/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -59,10 +59,10 @@ export function StickyFooter() {
               >
                 <img src="/instagram-icon.webp" alt="Instagram" className="w-7 h-7" />
                 <span>Instagram</span>
-              </a>
+              </a> */}
 
               {/* TikTok */}
-              <a 
+              {/* <a 
                 href="https://www.tiktok.com/@tucciwebstudio"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -70,7 +70,7 @@ export function StickyFooter() {
               >
                 <img src="/tiktok-icon.webp" alt="TikTok" className="w-7 h-7" />
                 <span>TikTok</span>
-              </a>
+              </a> */}
 
               {/* LinkedIn */}
               <a 
@@ -104,7 +104,7 @@ export function StickyFooter() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              TucciWebStudio
+              Santiago Tucci
             </motion.h2>
           </div>
         </motion.div>

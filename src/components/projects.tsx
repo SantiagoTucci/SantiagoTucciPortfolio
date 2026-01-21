@@ -4,43 +4,43 @@ const portfolioProjects = [
   {
     name: "Naviplas",
     url: "https://naviplas.netlify.app/",
-    body: "Landing page de muestra de productos de Naviplas",
+    body: "Product showcase landing page for Naviplas.",
     img: "/naviplas.webp",
   },
   {
     name: "Crearte.Maja",
     url: "https://creartemaja.vercel.app/",
-    body: "Ecommerce de gestión con catálogo y envio de pedido al correo",
+    body: "E-commerce platform with product catalog and order submission via email.",
     img: "/crearte-maja.webp",
   },
   {
-    name: "Centro IPhone",
+    name: "Centro iPhone",
     url: "https://centroiphoneweb.netlify.app/",
-    body: "Landing page de muestra de productos de Centro IPhone",
+    body: "Product-focused landing page for a mobile technology store.",
     img: "/centro-iphone.webp",
   },
   {
-    name: "Circulo Matero",
+    name: "Círculo Matero",
     url: "https://circulomatero.vercel.app/",
-    body: "Ecommerce de gestión con catálogo y envio de pedido al correo",
+    body: "E-commerce solution with product catalog and email-based order management.",
     img: "/circulo-matero.webp",
   },
   {
-    name: "Ig.Producciones",
+    name: "IG Producciones",
     url: "https://igproducciones.vercel.app/",
-    body: "Landing page moderna para una empresa de servicios de luces y sonido",
+    body: "Modern landing page for a lighting and sound services company.",
     img: "/ig-producciones.webp",
   },
   {
     name: "ESAENZ.ARQ",
     url: "https://esaenzarq.vercel.app/",
-    body: "Landing page para un arquitecto que buscaba mostrar sus proyectos a sus clientes",
+    body: "Portfolio website for an architect to showcase projects to clients.",
     img: "/esaenzarq.webp",
   },
   {
-    name: "Ferreteria FerreSur",
+    name: "Ferretería FerreSur",
     url: "https://ferresur.vercel.app/",
-    body: "Desarrolle una landing page para una ferreteria, además se le mejoro su busqueda en Google Maps",
+    body: "Landing page for a hardware store, including improvements to Google Maps visibility.",
     img: "/ferresur.webp",
   },
 ]
@@ -87,22 +87,24 @@ const ProjectCard = ({
 
 export function TestimonialsSection() {
   return (
-    <section id="testimonials" className="mb-24">
+    <section id="projects" className="mb-24">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-[540px]">
           <h2 className="from-foreground/60 via-foreground to-foreground/60 dark:from-muted-foreground/55 dark:via-foreground dark:to-muted-foreground/55 mt-5 bg-gradient-to-r bg-clip-text text-center text-4xl font-semibold tracking-tighter text-transparent md:text-[54px] md:leading-[60px] relative z-10">
-            Proyectos de clientes
+            Featured Projects
           </h2>
 
-          <p className="mt-5 text-center relative z-10 text-lg text-zinc-500">
-            Una selección de los trabajos más recientes que diseñé y desarrollé.
+          <p className="mt-5 text-center relative z-10 text-lg text-zinc-500 sm:px-0 px-1">
+            A selection of projects I designed and developed, showcasing my
+            experience in web development and software solutions.
           </p>
         </div>
 
-        <div className="my-16 flex max-h-[738px] justify-center gap-6 overflow-hidden 
-        [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]">
-
-          {/* Mobile: mostrar TODOS los proyectos */}
+        <div
+          className="my-16 flex max-h-[738px] justify-center gap-6 overflow-hidden 
+          [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]"
+        >
+          {/* Mobile: show ALL projects */}
           <div className="md:hidden">
             <Marquee pauseOnHover vertical className="[--duration:35s]">
               {portfolioProjects.map((project) => (
@@ -111,7 +113,7 @@ export function TestimonialsSection() {
             </Marquee>
           </div>
 
-          {/* Desktop columnas separadas */}
+          {/* Desktop: split columns */}
           <div className="hidden md:block">
             <Marquee pauseOnHover vertical className="[--duration:20s]">
               {firstColumn.map((project) => (

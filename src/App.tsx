@@ -2,8 +2,8 @@
 import { useState, useEffect } from "react"
 import Hero from "@/components/home/hero"
 import Features from "@/components/features"
-import { TestimonialsSection } from "@/components/testimonials"
-import { NewReleasePromo } from "@/components/new-release-promo"
+import { TestimonialsSection } from "@/components/projects"
+import { NewReleasePromo } from "@/components/contact"
 import { FAQSection } from "@/components/faq-section"
 import { PricingSection } from "@/components/pricing-section"
 import { StickyFooter } from "@/components/sticky-footer"
@@ -32,7 +32,7 @@ export default function Home() {
     setTimeout(() => {
       const element = document.getElementById(elementId)
       if (element) {
-        const headerOffset = 120 // Account for sticky header height + margin
+        const headerOffset = 120 
         const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
         const offsetPosition = elementPosition - headerOffset
 
@@ -46,7 +46,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen w-full relative bg-black">
-      {/* Pearl Mist Background with Top Glow */}
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -54,7 +53,6 @@ export default function Home() {
         }}
       />
 
-      {/* Desktop Header */}
       <header
         className={`sticky top-4 z-[9999] mx-auto hidden w-full flex-row items-center justify-between self-start rounded-full bg-background/80 md:flex backdrop-blur-sm border border-[#38bdf8]/40 shadow-lg transition-all duration-300 ${
           isScrolled ? "max-w-3xl px-2" : "max-w-5xl px-4"
@@ -69,7 +67,7 @@ export default function Home() {
               e.preventDefault()
               const element = document.getElementById("hero")
               if (element) {
-                const headerOffset = 120 // Account for sticky header height + margin
+                const headerOffset = 120 
                 const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
                 const offsetPosition = elementPosition - headerOffset
 
@@ -97,7 +95,7 @@ export default function Home() {
               e.preventDefault()
               const element = document.getElementById("features")
               if (element) {
-                const headerOffset = 120 // Account for sticky header height + margin
+                const headerOffset = 120 
                 const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
                 const offsetPosition = elementPosition - headerOffset
 
@@ -108,7 +106,7 @@ export default function Home() {
               }
             }}
           >
-            <span className="relative z-20">Servicios</span>
+            <span className="relative z-20">Skills</span>
           </a>
           <a
             className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
@@ -116,7 +114,7 @@ export default function Home() {
               e.preventDefault()
               const element = document.getElementById("testimonials")
               if (element) {
-                const headerOffset = 120 // Account for sticky header height + margin
+                const headerOffset = 120 
                 const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
                 const offsetPosition = elementPosition - headerOffset
 
@@ -127,7 +125,7 @@ export default function Home() {
               }
             }}
           >
-            <span className="relative z-20">Proyectos</span>
+            <span className="relative z-20">Projects</span>
           </a>
           <a
             className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
@@ -135,7 +133,7 @@ export default function Home() {
               e.preventDefault()
               const element = document.getElementById("contact")
               if (element) {
-                const headerOffset = 120 // Account for sticky header height + margin
+                const headerOffset = 120 
                 const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
                 const offsetPosition = elementPosition - headerOffset
 
@@ -146,12 +144,11 @@ export default function Home() {
               }
             }}
           >
-            <span className="relative z-20">Contacto</span>
+            <span className="relative z-20">Contact</span>
           </a>
         </div>
       </header>
 
-      {/* Mobile Header */}
       <header className="sticky top-4 z-[9999] mx-4 flex w-auto flex-row items-center justify-between rounded-full bg-background/80 backdrop-blur-sm border border-border/50 shadow-lg md:hidden px-4 py-3">
         <a
           className={`z-50 flex items-center justify-center gap-2 transition-all duration-300 ${
@@ -199,7 +196,6 @@ export default function Home() {
         </button>
       </header>
 
-      {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-[9998] bg-black/50 backdrop-blur-sm md:hidden">
           <div className="absolute top-23 left-4 right-4 bg-background/95 backdrop-blur-md border border-border/50 rounded-2xl shadow-2xl p-6">
@@ -208,26 +204,25 @@ export default function Home() {
                 onClick={() => handleMobileNavClick("features")}
                 className="text-left px-4 py-3 text-lg font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-background/50"
               >
-                Servicios
+                Skills
               </button>
               <button
                 onClick={() => handleMobileNavClick("testimonials")}
                 className="text-left px-4 py-3 text-lg font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-background/50"
               >
-                Proyectos
+                Projects
               </button>
               <button
                 onClick={() => handleMobileNavClick("contact")}
                 className="text-left px-4 py-3 text-lg font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-background/50"
               >
-                Contacto
+                Contact
               </button>
             </nav>
           </div>
         </div>
       )}
 
-      {/* Hero Section */}
       <div id="hero">
         <Hero />
       </div>
