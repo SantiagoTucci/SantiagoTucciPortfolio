@@ -43,11 +43,17 @@ const portfolioProjects = [
     body: "Landing page for a hardware store, including improvements to Google Maps visibility.",
     img: "/ferresur.webp",
   },
+  {
+    name: "Personal Study Guide",
+    url: "https://roadmap-study-guide.vercel.app/",
+    body: "Personal web application designed as a structured study roadmap for different careers.",
+    img: "/roadmap-study-guide.vercel.app.webp",
+  },
 ]
 
 const firstColumn = portfolioProjects.slice(0, 2)
-const secondColumn = portfolioProjects.slice(2, 4)
-const thirdColumn = portfolioProjects.slice(4, 6)
+const secondColumn = portfolioProjects.slice(2, 5)
+const thirdColumn = portfolioProjects.slice(5, 8)
 
 const ProjectCard = ({
   img,

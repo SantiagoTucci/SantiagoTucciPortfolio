@@ -1,4 +1,4 @@
-// optimize-images.js
+// node optimize-images.js
 import fs from "fs";
 import path from "path";
 import sharp from "sharp";
