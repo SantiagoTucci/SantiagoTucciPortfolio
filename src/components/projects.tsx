@@ -47,7 +47,7 @@ const portfolioProjects = [
     name: "Personal Study Guide",
     url: "https://roadmap-study-guide.vercel.app/",
     body: "Personal web application designed as a structured study roadmap for different careers.",
-    img: "/roadmap-study-guide.vercel.app.webp",
+    img: "/roadmap-study-guide.webp",
   },
 ]
 
