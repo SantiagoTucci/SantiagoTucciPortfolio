@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import Hero from "@/components/home/hero"
 import Features from "@/components/features"
 import { TestimonialsSection } from "@/components/projects"
+import Experience from "@/components/experience"
 import { NewReleasePromo } from "@/components/contact"
 import { FAQSection } from "@/components/faq-section"
 import { PricingSection } from "@/components/pricing-section"
@@ -238,6 +239,10 @@ export default function Home() {
       {/* Testimonials Section */}
       <div id="testimonials">
         <TestimonialsSection />
+      </div>
+
+      <div id="experience">
+        <Experience />
       </div>
 
       <div id="contact">

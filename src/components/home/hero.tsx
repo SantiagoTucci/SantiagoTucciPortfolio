@@ -22,14 +22,23 @@ export default function Hero() {
             id="main-title"
             className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-6xl"
           >
-            Software <strong>Developer</strong> <br />
-            <em className="italic">& QA</em>
+            Infrastructure <strong>Administrator</strong>
           </h1>
         </motion.div>
 
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.25 }}
+          className="mt-3 text-lg md:text-xl italic text-cyan-400"
+        >
+          Cloud, Systems &amp; Software
+        </motion.p>
+
         <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-md mx-auto md:mx-0 px-13 sm:px-0">
-          Passionate about building and testing high-quality software, with a
-          strong focus on reliability, performance, and user experience.
+          I keep systems reliable, secure, and automated — combining hands-on
+          infrastructure administration with a strong software engineering
+          background in scripting, IaC, and full-stack development.
         </p>
 
         <div className="mt-12 md:mt-9 flex flex-col sm:flex-row gap-4 justify-center md:justify-start px-20 md:px-0">

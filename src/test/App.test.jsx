@@ -6,6 +6,7 @@ vi.mock("../components/home/hero", () => ({ default: () => <div data-testid="her
 vi.mock("../components/features", () => ({ default: () => <div data-testid="features" /> }))
 vi.mock("../components/projects", () => ({ TestimonialsSection: () => <div data-testid="testimonials" /> }))
 vi.mock("../components/contact", () => ({ NewReleasePromo: () => <div data-testid="contact" /> }))
+vi.mock("../components/experience", () => ({ default: () => <div data-testid="experience" /> }))
 vi.mock("../components/sticky-footer", () => ({ StickyFooter: () => <div data-testid="footer" /> }))
 
 describe("Home basic test", () => {
@@ -15,6 +16,7 @@ describe("Home basic test", () => {
     expect(screen.getByTestId("features")).toBeInTheDocument()
     expect(screen.getByTestId("testimonials")).toBeInTheDocument()
     expect(screen.getByTestId("contact")).toBeInTheDocument()
+    expect(screen.getByTestId("experience")).toBeInTheDocument()
     expect(screen.getByTestId("footer")).toBeInTheDocument()
   })
 })

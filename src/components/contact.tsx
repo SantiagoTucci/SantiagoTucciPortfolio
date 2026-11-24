@@ -58,12 +58,12 @@ export function NewReleasePromo() {
             {/* Content */}
             <div className="relative z-10 px-6 py-10 mt-3.5 sm:mt-0 sm:py-14 flex flex-col items-center text-center gap-7">
               <h2 className="text-3xl sm:text-5xl font-bold leading-tight text-white drop-shadow-md">
-                Software Developer<br className="hidden sm:block" /> & QA
+                Infrastructure Administrator<br className="hidden sm:block" /> & Software Engineer
               </h2>
 
               <p className="text-white/80 text-base sm:text-lg max-w-md">
-                I design, develop, and test reliable software with a strong focus
-                on quality, performance, and user experience.
+                I keep IT infrastructure reliable, secure, and automated — from
+                servers and networking to cloud, monitoring, and disaster recovery.
               </p>
 
               <svg

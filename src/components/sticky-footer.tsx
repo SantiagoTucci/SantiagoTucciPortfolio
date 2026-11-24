@@ -74,7 +74,7 @@ export function StickyFooter() {
 
               {/* LinkedIn */}
               <a 
-                href="https://www.linkedin.com/in/santiago-tucci-816373275"
+                href="https://www.linkedin.com/in/tucci-santiago/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 cursor-pointer hover:opacity-70 transition-all"

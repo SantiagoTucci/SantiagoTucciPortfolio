@@ -101,8 +101,12 @@ export function TestimonialsSection() {
           </h2>
 
           <p className="mt-5 text-center relative z-10 text-lg text-zinc-500 sm:px-0 px-1">
-            A selection of projects I designed and developed, showcasing my
-            experience in web development and software solutions.
+            A selection of web projects I designed and developed — showcasing my
+            hands-on software engineering background that now powers my work in
+            infrastructure and automation.
+          </p>
+          <p className="mt-3 text-center relative z-10 text-sm text-cyan-400/80">
+            Category: Web Development
           </p>
         </div>
 

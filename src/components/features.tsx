@@ -4,7 +4,61 @@ import { motion, useInView, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 import { geist } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
-import { Code, Brush, Wrench, Search } from "lucide-react"
+import {
+  Server,
+  Network,
+  Cloud,
+  Container,
+  Activity,
+  DatabaseBackup,
+  ShieldCheck,
+  Workflow,
+  GitBranch,
+  Terminal,
+  Code2,
+  Globe,
+} from "lucide-react"
+
+const skillCategories = [
+  {
+    title: "Infrastructure & Cloud",
+    desc: "Operating and hardening the systems that keep services online and secure.",
+    icon: <Server className="w-10 h-10 text-cyan-400" />,
+    skills: [
+      { icon: <Server className="w-4 h-4" />, label: "Linux & Windows Server" },
+      { icon: <Cloud className="w-4 h-4" />, label: "Cloud & Virtualization" },
+      { icon: <Network className="w-4 h-4" />, label: "Networking" },
+      { icon: <Container className="w-4 h-4" />, label: "Docker" },
+      { icon: <Activity className="w-4 h-4" />, label: "Monitoring" },
+      { icon: <DatabaseBackup className="w-4 h-4" />, label: "Backups & DRP" },
+      { icon: <ShieldCheck className="w-4 h-4" />, label: "Security Hardening" },
+    ],
+  },
+  {
+    title: "Automation & DevOps",
+    desc: "Turning repetitive ops work into reliable, repeatable automation.",
+    icon: <Workflow className="w-10 h-10 text-cyan-400" />,
+    skills: [
+      { icon: <Workflow className="w-4 h-4" />, label: "CI/CD Pipelines" },
+      { icon: <GitBranch className="w-4 h-4" />, label: "Git & GitHub Actions" },
+      { icon: <Terminal className="w-4 h-4" />, label: "Scripting" },
+      { icon: <Cloud className="w-4 h-4" />, label: "Infrastructure as Code" },
+      { icon: <ShieldCheck className="w-4 h-4" />, label: "DevOps Practices" },
+    ],
+  },
+  {
+    title: "Software & Web Development",
+    desc: "Full-stack development experience behind every project on this site.",
+    icon: <Code2 className="w-10 h-10 text-cyan-400" />,
+    skills: [
+      { icon: <Globe className="w-4 h-4" />, label: "Frontend (React, TypeScript)" },
+      { icon: <Code2 className="w-4 h-4" />, label: "Backend & APIs" },
+      { icon: <Globe className="w-4 h-4" />, label: "Responsive UI/UX" },
+      { icon: <Activity className="w-4 h-4" />, label: "QA & Testing" },
+      { icon: <Container className="w-4 h-4" />, label: "Deployment" },
+    ],
+  },
+]
 
 export default function Services() {
   const ref = useRef(null)
@@ -17,31 +71,6 @@ export default function Services() {
 
   const translateY = useTransform(scrollYProgress, [0, 1], [40, -40])
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0])
-
-  const primaryColor = "text-cyan-600"
-
-  const services = [
-    {
-      title: "Frontend Development",
-      desc: "Building responsive, accessible, and modern user interfaces with a strong focus on usability.",
-      icon: <Brush className={`w-10 h-10 ${primaryColor}`} />,
-    },
-    {
-      title: "Software Development",
-      desc: "Developing scalable, maintainable, and well-structured applications using best practices.",
-      icon: <Code className={`w-10 h-10 ${primaryColor}`} />,
-    },
-    {
-      title: "Quality Assurance & Testing",
-      desc: "Manual and automated testing to ensure reliability, performance, and defect-free software.",
-      icon: <Search className={`w-10 h-10 ${primaryColor}`} />,
-    },
-    {
-      title: "Maintenance & Continuous Improvement",
-      desc: "Bug fixing, refactoring, and continuous enhancements to improve software quality over time.",
-      icon: <Wrench className={`w-10 h-10 ${primaryColor}`} />,
-    },
-  ]
 
   return (
     <section id="skills" className="relative overflow-hidden py-12 sm:py-24 md:py-40">
@@ -64,10 +93,10 @@ export default function Services() {
         </h2>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full px-3 sm:px-20 md:px-30">
-          {services.map((service, i) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full px-3 sm:px-10 md:px-20">
+          {skillCategories.map((category, i) => (
             <motion.div
-              key={i}
+              key={category.title}
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.35, delay: i * 0.1 }}
@@ -83,11 +112,22 @@ export default function Services() {
                 transition-all cursor-pointer
               "
             >
-              <div className="mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold">{service.title}</h3>
-              <p className="text-sm text-muted-foreground mt-2">
-                {service.desc}
+              <div className="mb-4">{category.icon}</div>
+              <h3 className="text-xl font-semibold">{category.title}</h3>
+              <p className="text-sm text-muted-foreground mt-2 mb-4">
+                {category.desc}
               </p>
+              <ul className="flex flex-wrap gap-2">
+                {category.skills.map((skill) => (
+                  <li
+                    key={skill.label}
+                    className="flex items-center gap-1.5 rounded-full border border-cyan-600/30 bg-cyan-600/10 px-3 py-1.5 text-xs text-cyan-300"
+                  >
+                    {skill.icon}
+                    {skill.label}
+                  </li>
+                ))}
+              </ul>
             </motion.div>
           ))}
         </div>
